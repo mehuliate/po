@@ -5,9 +5,12 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header bg-dark text-white">Browse</div>
+                <div class="card-header bg-dark text-white">Pengajuan</div>
 
                 <div class="card-body">
+                    <div class="my-3">
+                        <a class="btn btn-primary" type="submit" href="{{route('pengajuanCreate')}}">Buat</a>
+                    </div>
                     <table class="table table-bordered table-sm table-hover">
                         <thead>
                             <tr>

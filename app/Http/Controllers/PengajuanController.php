@@ -47,13 +47,14 @@ class PengajuanController extends Controller
         ]);
 
         $layanan = Layanan::findOrFail($request->layanan);
-        $userId = auth()->user()->id;
+        $user = User::findOrFail(auth()->user()->id);
 
         $dokumen = new Dokumen;
         $dokumen->layanan_id = $layanan->id;
-        $dokumen->user_id = $userId;
+        $dokumen->user_id = $user->id;
         $dokumen->status_id = 0;
         $dokumen->status = 'draft';
+        $dokumen->perusahaan_id = $user->perusahaan->id;
         $dokumen->save();
 
         return redirect()->route('pengajuanShow', [$dokumen]);
@@ -69,6 +70,7 @@ class PengajuanController extends Controller
     public function show($id)
     {
         $dokumen = Dokumen::findOrFail($id);
+
         return view('pengajuan/show', compact('dokumen'));
     }
 

@@ -9,7 +9,8 @@
 
                 <div class="card-body">
                     <h1>Identitas</h1>
-                    <p>Nama: </p>
+                    <p>Nama: {{$user->perusahaan->nama}}</p>
+                    <p>Identitas: {{$user->perusahaan->no_kd_id}}</p>
 
                     <form method="POST" action="{{route('pengajuanStore')}}">
                     @csrf

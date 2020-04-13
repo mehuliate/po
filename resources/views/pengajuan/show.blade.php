@@ -12,11 +12,11 @@
 
                     <div class="row">
                         <div class="col">
-                            <table class="table table-sm">
+                            <table>
                                 <tbody>
                                     <tr>
                                         <th style="width: 20%">Jenis Identitas</th>
-                                        <td>: {{$dokumen->perusahaan->no_kd_id}}</td>
+                                        <td>: <input type="text" name="" id="" value="{{$dokumen->perusahaan->no_kd_id}}"></td>
                                     </tr>
                                     <tr>
                                         <th>Nama</th>
