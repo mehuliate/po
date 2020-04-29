@@ -43,13 +43,13 @@
             <input type="text" class="form-control form-control-sm" name="uraian_detail_barang[]" placeholder="Uraian">
         </div>
         <div class="col-sm-1">
-            <input type="text" class="form-control form-control-sm" name="jumlah_satuan_detail_barang[]" placeholder="Jumlah">
+            <input type="text" class="form-control form-control-sm" name="jumlah_satuan_detail_barang[]" placeholder="Jumlah Satuan">
         </div>
         <div class="col-sm-2">
-            <input type="text" class="form-control form-control-sm" name="jenis_satuan_detail_barang[]" placeholder="Satuan">
+            <input type="text" class="form-control form-control-sm" name="jenis_satuan_detail_barang[]" placeholder="Jenis Satuan">
         </div>
          <div class="col-sm-1">
-            <input type="text" class="form-control form-control-sm" name="jumlah_kemasan_detail_barang[]" placeholder="Jumlah">
+            <input type="text" class="form-control form-control-sm" name="jumlah_kemasan_detail_barang[]" placeholder="Jumlah Kemasan">
         </div>
         <div class="col-sm-2">
             <input type="text" class="form-control form-control-sm" name="jenis_kemasan_detail_barang[]" placeholder="Jenis Kemasan">
@@ -67,3 +67,27 @@
         <button class="btn btn-primary btn-sm" onclick="cloneInputDetailBarang()">Tambah</button>
     </div>
 </div>
+
+    {{--copy element input detail barang--}}
+    <div style="display: none;">
+        <div class="form-group row" id="copy_detail_barang_input">
+            <div class="col-sm-3">
+                <input type="text" class="form-control form-control-sm" name="uraian_detail_barang[]" placeholder="Uraian">
+            </div>
+            <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" name="jumlah_satuan_detail_barang[]" placeholder="Jumlah Satuan">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" name="jenis_satuan_detail_barang[]" placeholder="Jenis Satuan">
+            </div>
+            <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" name="jumlah_kemasan_detail_barang[]" placeholder="Jumlah Kemasana">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" name="jenis_kemasan_detail_barang[]" placeholder="Jenis Kemasan">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" name="nomor_detail_barang[]" placeholder="Nomor/SN">
+            </div>
+        </div>
+    </div>
