@@ -27,13 +27,15 @@ CREATE TABLE IF NOT EXISTS `dokumen` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_po.dokumen: ~2 rows (approximately)
+-- Dumping data for table db_po.dokumen: ~4 rows (approximately)
 /*!40000 ALTER TABLE `dokumen` DISABLE KEYS */;
 INSERT INTO `dokumen` (`id`, `layanan_id`, `status_id`, `status`, `user_id`, `perusahaan_id`, `created_at`, `updated_at`) VALUES
 	(1, 1, 0, 'draft', 1, NULL, '2020-04-08 07:00:13', '2020-04-08 07:00:13'),
-	(2, 1, 0, 'draft', 1, 1, '2020-04-08 07:08:07', '2020-04-08 07:08:07');
+	(2, 1, 0, 'draft', 1, 1, '2020-04-08 07:08:07', '2020-04-08 07:08:07'),
+	(3, 2, 0, 'draft', 1, 1, '2020-04-14 21:42:29', '2020-04-14 21:42:29'),
+	(4, 3, 0, 'draft', 1, 1, '2020-04-22 04:06:27', '2020-04-22 04:06:27');
 /*!40000 ALTER TABLE `dokumen` ENABLE KEYS */;
 
 -- Dumping structure for table db_po.dokumen_lampiran
@@ -82,11 +84,57 @@ CREATE TABLE IF NOT EXISTS `ekspor_sementara` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='tabel ekspor sementara';
 
--- Dumping data for table db_po.ekspor_sementara: ~0 rows (approximately)
+-- Dumping data for table db_po.ekspor_sementara: ~19 rows (approximately)
 /*!40000 ALTER TABLE `ekspor_sementara` DISABLE KEYS */;
+INSERT INTO `ekspor_sementara` (`id`, `nomor`, `nomor_kode`, `tgl_surat`, `sifat`, `hal`, `nama_perusahaan`, `alamat_perusahaan`, `nomor_surat_permohonan`, `tgl_surat_permohonan`, `hal_surat_permohonan`, `jenis_barang`, `jumlah`, `nomor_invoice`, `tgl_invoice`, `nilai_barang`, `serial_barang`, `negara_tujuan`, `jangka_waktu`, `created_by`, `sign_by`, `bidang_id`, `seksi_id`, `agenda_id`, `created_at`, `updated_at`) VALUES
+	(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-22 07:01:47', '2020-04-22 07:01:47'),
+	(2, NULL, NULL, NULL, NULL, NULL, 'adasd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-22 07:02:08', '2020-04-22 07:02:08'),
+	(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-27 07:53:52', '2020-04-27 07:53:52'),
+	(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 03:49:10', '2020-04-28 03:49:10'),
+	(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 03:49:14', '2020-04-28 03:49:14'),
+	(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 03:54:53', '2020-04-28 03:54:53'),
+	(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 03:57:15', '2020-04-28 03:57:15'),
+	(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 07:16:42', '2020-04-28 07:16:42'),
+	(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 07:17:19', '2020-04-28 07:17:19'),
+	(10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 07:18:22', '2020-04-28 07:18:22'),
+	(11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 07:20:20', '2020-04-28 07:20:20'),
+	(12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:07:30', '2020-04-28 08:07:30'),
+	(13, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:07:58', '2020-04-28 08:07:58'),
+	(14, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:09:32', '2020-04-28 08:09:32'),
+	(15, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:10:15', '2020-04-28 08:10:15'),
+	(16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:12:34', '2020-04-28 08:12:34'),
+	(17, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:12:48', '2020-04-28 08:12:48'),
+	(18, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:14:37', '2020-04-28 08:14:37'),
+	(19, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:14:52', '2020-04-28 08:14:52');
 /*!40000 ALTER TABLE `ekspor_sementara` ENABLE KEYS */;
+
+-- Dumping structure for table db_po.ekspor_sementara_detail_barang
+CREATE TABLE IF NOT EXISTS `ekspor_sementara_detail_barang` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ekspor_sementara_id` int(10) unsigned DEFAULT NULL,
+  `uraian` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `jumlah_satuan` decimal(10,0) DEFAULT NULL,
+  `jenis_satuan` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `jumlah_kemasan` decimal(10,0) DEFAULT NULL,
+  `jenis_kemasan` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `serial_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_ekspor_sementara_detail_barang_ekspor_sementara` (`ekspor_sementara_id`),
+  CONSTRAINT `FK_ekspor_sementara_detail_barang_ekspor_sementara` FOREIGN KEY (`ekspor_sementara_id`) REFERENCES `ekspor_sementara` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='detail barang dari table ekspor sementara';
+
+-- Dumping data for table db_po.ekspor_sementara_detail_barang: ~4 rows (approximately)
+/*!40000 ALTER TABLE `ekspor_sementara_detail_barang` DISABLE KEYS */;
+INSERT INTO `ekspor_sementara_detail_barang` (`id`, `ekspor_sementara_id`, `uraian`, `jumlah_satuan`, `jenis_satuan`, `jumlah_kemasan`, `jenis_kemasan`, `serial_number`, `created_at`, `updated_at`) VALUES
+	(1, 15, 'adada', NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:10:15', '2020-04-28 08:10:15'),
+	(2, 15, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:10:15', '2020-04-28 08:10:15'),
+	(3, 15, 'adasd', NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:10:15', '2020-04-28 08:10:15'),
+	(4, 19, 'asdasda', NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:14:52', '2020-04-28 08:14:52');
+/*!40000 ALTER TABLE `ekspor_sementara_detail_barang` ENABLE KEYS */;
 
 -- Dumping structure for table db_po.failed_jobs
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
@@ -122,6 +170,22 @@ CREATE TABLE IF NOT EXISTS `file` (
 /*!40000 ALTER TABLE `file` DISABLE KEYS */;
 /*!40000 ALTER TABLE `file` ENABLE KEYS */;
 
+-- Dumping structure for table db_po.jenis_identitas
+CREATE TABLE IF NOT EXISTS `jenis_identitas` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `uraian` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table db_po.jenis_identitas: ~4 rows (approximately)
+/*!40000 ALTER TABLE `jenis_identitas` DISABLE KEYS */;
+INSERT INTO `jenis_identitas` (`id`, `uraian`) VALUES
+	(2, 'PASSPOR'),
+	(3, 'KTP'),
+	(4, 'LAINNYA'),
+	(5, 'NPWP');
+/*!40000 ALTER TABLE `jenis_identitas` ENABLE KEYS */;
+
 -- Dumping structure for table db_po.jenis_layanan
 CREATE TABLE IF NOT EXISTS `jenis_layanan` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -130,13 +194,14 @@ CREATE TABLE IF NOT EXISTS `jenis_layanan` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table db_po.jenis_layanan: ~2 rows (approximately)
+-- Dumping data for table db_po.jenis_layanan: ~3 rows (approximately)
 /*!40000 ALTER TABLE `jenis_layanan` DISABLE KEYS */;
 INSERT INTO `jenis_layanan` (`id`, `nama`, `slug`, `created_at`, `updated_at`) VALUES
 	(1, 'PERSETUJUAN EKSPOR SEMENTARA', 'persetujuan-ekspor-sementara', '2020-03-22 10:58:55', '2020-03-22 10:58:58'),
-	(2, 'layanan 2', 'layanan-2', '2020-03-22 11:00:29', '2020-03-22 11:00:30');
+	(2, 'Aktivasi Modul PIB', 'aktifasi-modul-pib', '2020-03-22 11:00:29', '2020-03-22 11:00:30'),
+	(3, 'Aktivasi Modul PEB', 'aktifasi-modul-peb', '2020-04-15 04:40:11', '2020-04-15 04:40:11');
 /*!40000 ALTER TABLE `jenis_layanan` ENABLE KEYS */;
 
 -- Dumping structure for table db_po.layanan_lampiran
@@ -180,7 +245,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_po.migrations: ~2 rows (approximately)
+-- Dumping data for table db_po.migrations: ~3 rows (approximately)
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_000000_create_users_table', 1),
@@ -188,72 +253,17 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(3, '2019_08_19_000000_create_failed_jobs_table', 1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
--- Dumping structure for table db_po.password_resets
-CREATE TABLE IF NOT EXISTS `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  KEY `password_resets_email_index` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table db_po.password_resets: ~0 rows (approximately)
-/*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
-/*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
-
--- Dumping structure for table db_po.profil
-CREATE TABLE IF NOT EXISTS `profil` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `alamat` varchar(196) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `no_tlp` varchar(196) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `kd_id` tinyint(4) DEFAULT NULL,
-  `no_kd_id` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table db_po.profil: ~1 rows (approximately)
-/*!40000 ALTER TABLE `profil` DISABLE KEYS */;
-INSERT INTO `profil` (`id`, `alamat`, `no_tlp`, `kd_id`, `no_kd_id`) VALUES
-	(1, '12321312312', NULL, NULL, NULL);
-/*!40000 ALTER TABLE `profil` ENABLE KEYS */;
-
--- Dumping structure for table db_po.status
-CREATE TABLE IF NOT EXISTS `status` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nama` varchar(196) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Dumping data for table db_po.status: ~0 rows (approximately)
-/*!40000 ALTER TABLE `status` DISABLE KEYS */;
-/*!40000 ALTER TABLE `status` ENABLE KEYS */;
-
--- Dumping structure for table db_po.tr_jenis_identitas
-CREATE TABLE IF NOT EXISTS `tr_jenis_identitas` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `uraian` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
--- Dumping data for table db_po.tr_jenis_identitas: ~4 rows (approximately)
-/*!40000 ALTER TABLE `tr_jenis_identitas` DISABLE KEYS */;
-INSERT INTO `tr_jenis_identitas` (`id`, `uraian`) VALUES
-	(2, 'PASSPOR'),
-	(3, 'KTP'),
-	(4, 'LAINNYA'),
-	(5, 'NPWP');
-/*!40000 ALTER TABLE `tr_jenis_identitas` ENABLE KEYS */;
-
--- Dumping structure for table db_po.tr_negara
-CREATE TABLE IF NOT EXISTS `tr_negara` (
+-- Dumping structure for table db_po.negara
+CREATE TABLE IF NOT EXISTS `negara` (
   `ID_NEGARA` varchar(2) NOT NULL,
   `NM_NEGARA` varchar(50) DEFAULT NULL,
   `KD_NA` varchar(3) DEFAULT NULL,
   PRIMARY KEY (`ID_NEGARA`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_po.tr_negara: ~254 rows (approximately)
-/*!40000 ALTER TABLE `tr_negara` DISABLE KEYS */;
-INSERT INTO `tr_negara` (`ID_NEGARA`, `NM_NEGARA`, `KD_NA`) VALUES
+-- Dumping data for table db_po.negara: ~254 rows (approximately)
+/*!40000 ALTER TABLE `negara` DISABLE KEYS */;
+INSERT INTO `negara` (`ID_NEGARA`, `NM_NEGARA`, `KD_NA`) VALUES
 	('AD', 'ANDORRA', '999'),
 	('AE', 'UNITED ARAB EMIRATES', '155'),
 	('AF', 'AFGHANISTAN', '137'),
@@ -508,10 +518,22 @@ INSERT INTO `tr_negara` (`ID_NEGARA`, `NM_NEGARA`, `KD_NA`) VALUES
 	('ZA', 'SOUTH AFRICA', '261'),
 	('ZM', 'ZAMBIA', '263'),
 	('ZW', 'ZIMBABWE', '262');
-/*!40000 ALTER TABLE `tr_negara` ENABLE KEYS */;
+/*!40000 ALTER TABLE `negara` ENABLE KEYS */;
 
--- Dumping structure for table db_po.tr_perusahaan
-CREATE TABLE IF NOT EXISTS `tr_perusahaan` (
+-- Dumping structure for table db_po.password_resets
+CREATE TABLE IF NOT EXISTS `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table db_po.password_resets: ~0 rows (approximately)
+/*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
+/*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
+
+-- Dumping structure for table db_po.perusahaan
+CREATE TABLE IF NOT EXISTS `perusahaan` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `kd_id` tinyint(3) unsigned DEFAULT NULL,
   `no_kd_id` varchar(20) DEFAULT NULL,
@@ -539,15 +561,42 @@ CREATE TABLE IF NOT EXISTS `tr_perusahaan` (
   `fl_khusus` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_perusahaan_kd_id` (`kd_id`),
-  CONSTRAINT `FK_perusahaan_kd_id` FOREIGN KEY (`kd_id`) REFERENCES `tr_jenis_identitas` (`id`)
+  CONSTRAINT `FK_perusahaan_kd_id` FOREIGN KEY (`kd_id`) REFERENCES `jenis_identitas` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_po.tr_perusahaan: ~0 rows (approximately)
-/*!40000 ALTER TABLE `tr_perusahaan` DISABLE KEYS */;
-INSERT INTO `tr_perusahaan` (`id`, `kd_id`, `no_kd_id`, `nama`, `alamat`, `kd_pod`, `no_tlp`, `no_fax`, `kota`, `status_perusahaan`, `kd_api`, `no_api`, `kategori`, `fl_history`, `ks_kantor_rekam`, `nip_rekam`, `wk_rekam`, `nip_upd`, `wk_upd`, `npwp9`, `no_tdp`, `tgl_tdp`, `no_siup`, `tgl_siup`, `fl_khusus`) VALUES
+-- Dumping data for table db_po.perusahaan: ~2 rows (approximately)
+/*!40000 ALTER TABLE `perusahaan` DISABLE KEYS */;
+INSERT INTO `perusahaan` (`id`, `kd_id`, `no_kd_id`, `nama`, `alamat`, `kd_pod`, `no_tlp`, `no_fax`, `kota`, `status_perusahaan`, `kd_api`, `no_api`, `kategori`, `fl_history`, `ks_kantor_rekam`, `nip_rekam`, `wk_rekam`, `nip_upd`, `wk_upd`, `npwp9`, `no_tdp`, `tgl_tdp`, `no_siup`, `tgl_siup`, `fl_khusus`) VALUES
 	(1, 5, '999999999999999', 'PT NAMA PERUSAHAAN', 'ALAMAT PERUSAHAAN ADALAH DI KOTA ADALAH', '12345', '2121212121', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 	(2, 5, '2313123123', 'PT NAMA B', 'ALAMAT PERUSAHAAN ADALAH DI KOTA ADALAH', '12345', '2121212121', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-/*!40000 ALTER TABLE `tr_perusahaan` ENABLE KEYS */;
+/*!40000 ALTER TABLE `perusahaan` ENABLE KEYS */;
+
+-- Dumping structure for table db_po.profil
+CREATE TABLE IF NOT EXISTS `profil` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `alamat` varchar(196) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `no_tlp` varchar(196) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `kd_id` tinyint(4) DEFAULT NULL,
+  `no_kd_id` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table db_po.profil: ~1 rows (approximately)
+/*!40000 ALTER TABLE `profil` DISABLE KEYS */;
+INSERT INTO `profil` (`id`, `alamat`, `no_tlp`, `kd_id`, `no_kd_id`) VALUES
+	(1, '12321312312', NULL, NULL, NULL);
+/*!40000 ALTER TABLE `profil` ENABLE KEYS */;
+
+-- Dumping structure for table db_po.status
+CREATE TABLE IF NOT EXISTS `status` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nama` varchar(196) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table db_po.status: ~0 rows (approximately)
+/*!40000 ALTER TABLE `status` DISABLE KEYS */;
+/*!40000 ALTER TABLE `status` ENABLE KEYS */;
 
 -- Dumping structure for table db_po.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -565,7 +614,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `users_email_unique` (`email`),
   KEY `perusahaan_id` (`perusahaan_id`),
   KEY `profil_id` (`profil_id`),
-  CONSTRAINT `FK_users_perusahaan` FOREIGN KEY (`perusahaan_id`) REFERENCES `tr_perusahaan` (`id`),
+  CONSTRAINT `FK_users_perusahaan` FOREIGN KEY (`perusahaan_id`) REFERENCES `perusahaan` (`id`),
   CONSTRAINT `FK_users_profil` FOREIGN KEY (`profil_id`) REFERENCES `profil` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

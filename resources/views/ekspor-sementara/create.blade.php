@@ -5,78 +5,85 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header bg-dark text-white">Buat Pengajuan</div>
+                <div class="card-header bg-dark text-white">Buat Pengajuan Ekspor Sementara</div>
 
                 <div class="card-body">
                     <h4>Pengajuan Ekspor Sementara</h4>
-                <form>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Nama Perusahaan</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="nama_perusahaan">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Alamat</label>
-                        <div class="col-sm-10">
-                        <textarea class="form-control form-control-sm" rows="2"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Jenis barang</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Jumlah</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Invoice</label>
-                        <div class="col-sm-5">
-                        <input type="text" class="form-control form-control-sm" id="" placeholder="Nomor">
-                        </div>
-                        <div class="col-sm-5">
-                        <input type="date" class="form-control form-control-sm" id="" placeholder="Tanggal">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Nilai Barang</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Serial Number</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Negara Tujuan</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Jangka Waktu</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Kirim</button>
-                        </div>
-                    </div>
-                </form>
-
+                    @include('ekspor-sementara.partial.create_form')
                 </div>
             </div>
         </div>
     </div>
+
+    {{--input detail barang--}}
+    <div style="display: none;">
+        <div class="form-group row" id="copy_detail_barang_input">
+            <div class="col-sm-3">
+                <input type="text" class="form-control form-control-sm" name="uraian_detail_barang[]" placeholder="Uraian">
+            </div>
+            <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" name="jumlah_satuan_detail_barang[]" placeholder="Jumlah">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" name="jenis_satuan_detail_barang[]" placeholder="Satuan">
+            </div>
+            <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" name="jumlah_kemasan_detail_barang[]" placeholder="Jumlah">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" name="jenis_kemasan_detail_barang[]" placeholder="Jenis Kemasan">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" name="nomor_detail_barang[]" placeholder="Nomor/SN">
+            </div>
+        </div>
+    </div>
+    <div style="display: none;">
+        <div class="form-group row" id="copy_input_dokumen_pelengkap">
+            <div class="col-sm-4">
+                <input type="text" class="form-control form-control-sm" id="" placeholder="Jenis Dokumen">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control form-control-sm" id="" placeholder="Nomor">
+            </div>
+            <div class="col-sm-3">
+                <input type="text" class="form-control form-control-sm" id="" placeholder="tanggal">
+            </div>
+        </div>
+    </div>
 </div>
+@endsection
+
+@section('script')
+<script>
+    //add input
+    let i = 1;
+    function btnRv(rowId){
+
+    }
+    function cloneInputDetailBarang(){
+        event.preventDefault();
+        i++;
+        rowId = 'input_barang_'+i;
+        let clone = document.querySelector('#copy_detail_barang_input').cloneNode( true );
+            clone.setAttribute( 'id', rowId );
+        //create div btn remove
+        let div = document.createElement('div')
+            div.className="col-sm-1";
+        let btnRv = document.createElement('button')
+            btnRv.className="btn btn-sm btn-danger";
+            btnRv.innerHTML='x';
+            btnRv.setAttribute('onclick', 'removeInput("#'+rowId+'")');
+        div.appendChild(btnRv);
+        //append to clone
+        clone.appendChild(div);
+        document.querySelector('#detail_barang_input').appendChild( clone );
+    }
+
+    //remove input
+    function removeInput(id){
+        event.preventDefault();
+        document.querySelector(id).remove();
+    }
+</script>
 @endsection

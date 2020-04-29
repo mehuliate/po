@@ -23,9 +23,7 @@ class DokumenController extends Controller
 
 
         $dokumen = Dokumen::findOrfail($id);
-
         $dokumenLampiran = new Dokumenlampiran();
-
         $dokumenLampiran->nama = $request->jenis_dok;
         $dokumenLampiran->nomor = $request->nomor;
         $dokumenLampiran->tgl = $request->tgl;
@@ -47,11 +45,8 @@ class DokumenController extends Controller
             }
 
         }
-
         $dokumenLampiran->file_id = $berkas->uuid;
-
         $dokumen->dokumenLampiran()->save($dokumenLampiran);
-
         return back();
 
     }
