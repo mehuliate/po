@@ -46,7 +46,15 @@
         <input type="text" class="form-control form-control-sm" id="" placeholder="Jenis Dokumen">
     </div>
     <div class="col-sm-4">
-        <button class="btn btn-primary btn-sm">Upload</button>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-secondary btn-sm" type="button" id="inputGroupFileAddon03">Button</button>
+  </div>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input form-control-sm" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+    <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+  </div>
+</div>
     </div>
 </div>
 <div class="form-group row">

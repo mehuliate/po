@@ -37,6 +37,7 @@ class EksporSementaraController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         $eksporS = new EksporSementara;
         $eksporS->nama_perusahaan = $request->nama_perusahaan;
         $eksporS->alamat_perusahaan = $request->alamat_perusahaan;
