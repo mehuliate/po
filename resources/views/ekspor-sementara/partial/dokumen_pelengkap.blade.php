@@ -25,24 +25,6 @@
                     <a href="#">Hapus</a>
                 </td>
                 </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>Thornton</td>
-                <td>
-                    <a href="#">Hapus</a>
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>the Bird</td>
-                <td>
-                    <a href="#">Hapus</a>
-                </td>
-                </tr>
             </tbody>
         </table>
 
@@ -57,7 +39,7 @@
             <input type="text" class="form-control form-control-sm" name="nomor_dokumen_pelengkap[]"placeholder="Nomor">
         </div>
         <div class="col-sm-3">
-            <input type="text" class="form-control form-control-sm" name="tanggal_dokumen_pelengkap[]" placeholder="tanggal">
+            <input type="date" class="form-control form-control-sm" name="tanggal_dokumen_pelengkap[]" placeholder="tanggal">
         </div>
         {{-- <div class="col-sm-1"> --}}
             {{-- <button class="btn btn-danger btn-sm"> --}}
@@ -69,21 +51,6 @@
 
 <div class="form-group row">
     <div class="col-sm-10">
-        <button class="btn btn-primary btn-sm" onclick="cloneInputDokPelengkap()">Tambah</button>
+        <button class="btn btn-primary btn-sm" onclick="addInput('#dokumen_pelengkap_input')">Tambah</button>
     </div>
 </div>
-
-    {{--copy element input dokumen pelengkap--}}
-    <div style="display:none">
-        <div class="form-group row" id="copy_dokumen_pelengkap_input">
-            <div class="col-sm-3">
-                <input type="text" class="form-control form-control-sm" name="jenis_dokumen_pelengkap[]" placeholder="Jenis Dokumen">
-            </div>
-            <div class="col-sm-3">
-                <input type="text" class="form-control form-control-sm" name="nomor_dokumen_pelengkap[]"placeholder="Nomor">
-            </div>
-            <div class="col-sm-3">
-                <input type="text" class="form-control form-control-sm" name="tanggal_dokumen_pelengkap[]" placeholder="tanggal">
-            </div>
-        </div>
-    </div>

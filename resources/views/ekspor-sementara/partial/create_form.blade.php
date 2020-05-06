@@ -1,4 +1,4 @@
-<form method="POST" action="{{route('eksporSementara.store')}}">
+<form method="POST" action="{{route('eksporSementara.store')}}" enctype="multipart/form-data">
     @csrf
     <div class="form-group row">
         <label for="Nama Perusahaan" class="col-sm-2 col-form-label">Nama Perusahaan</label>

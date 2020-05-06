@@ -20,6 +20,7 @@ Route::post('/pengajuan-store', 'PengajuanController@store')->name('pengajuanSto
 //Ekspor Sementara
 Route::get('ekspor-sementara/create','EksporSementaraController@create')->name('eksporSementara.create');
 Route::post('ekspor-sementara/store','EksporSementaraController@store')->name('eksporSementara.store');
+Route::get('ekspor-sementara/show/{eksporS}','EksporSementaraController@show')->name('eksporSementara.show');
 
 
 Route::post('/upload-lampiran/{id}', 'DokumenController@uploadlampiran')->name('uploadLampiran')->middleware('auth');

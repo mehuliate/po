@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `dokumen` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_po.dokumen: ~4 rows (approximately)
+-- Dumping data for table db_po.dokumen: ~2 rows (approximately)
 /*!40000 ALTER TABLE `dokumen` DISABLE KEYS */;
 INSERT INTO `dokumen` (`id`, `layanan_id`, `status_id`, `status`, `user_id`, `perusahaan_id`, `created_at`, `updated_at`) VALUES
 	(1, 1, 0, 'draft', 1, NULL, '2020-04-08 07:00:13', '2020-04-08 07:00:13'),
@@ -84,9 +84,9 @@ CREATE TABLE IF NOT EXISTS `ekspor_sementara` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='tabel ekspor sementara';
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='tabel ekspor sementara';
 
--- Dumping data for table db_po.ekspor_sementara: ~19 rows (approximately)
+-- Dumping data for table db_po.ekspor_sementara: ~47 rows (approximately)
 /*!40000 ALTER TABLE `ekspor_sementara` DISABLE KEYS */;
 INSERT INTO `ekspor_sementara` (`id`, `nomor`, `nomor_kode`, `tgl_surat`, `sifat`, `hal`, `nama_perusahaan`, `alamat_perusahaan`, `nomor_surat_permohonan`, `tgl_surat_permohonan`, `hal_surat_permohonan`, `jenis_barang`, `jumlah`, `nomor_invoice`, `tgl_invoice`, `nilai_barang`, `serial_barang`, `negara_tujuan`, `jangka_waktu`, `created_by`, `sign_by`, `bidang_id`, `seksi_id`, `agenda_id`, `created_at`, `updated_at`) VALUES
 	(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-22 07:01:47', '2020-04-22 07:01:47'),
@@ -107,7 +107,37 @@ INSERT INTO `ekspor_sementara` (`id`, `nomor`, `nomor_kode`, `tgl_surat`, `sifat
 	(16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:12:34', '2020-04-28 08:12:34'),
 	(17, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:12:48', '2020-04-28 08:12:48'),
 	(18, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:14:37', '2020-04-28 08:14:37'),
-	(19, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:14:52', '2020-04-28 08:14:52');
+	(19, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:14:52', '2020-04-28 08:14:52'),
+	(20, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-04-29 14:03:03', '2020-04-29 14:03:03'),
+	(21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-04 04:46:08', '2020-05-04 04:46:08'),
+	(22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 03:40:07', '2020-05-05 03:40:07'),
+	(23, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 03:43:03', '2020-05-05 03:43:03'),
+	(24, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 03:44:10', '2020-05-05 03:44:10'),
+	(25, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 06:11:09', '2020-05-05 06:11:09'),
+	(26, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 07:40:23', '2020-05-05 07:40:23'),
+	(27, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 07:41:24', '2020-05-05 07:41:24'),
+	(28, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 07:41:45', '2020-05-05 07:41:45'),
+	(29, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:02:00', '2020-05-05 08:02:00'),
+	(30, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:02:45', '2020-05-05 08:02:45'),
+	(31, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:03:44', '2020-05-05 08:03:44'),
+	(32, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:04:48', '2020-05-05 08:04:48'),
+	(33, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:06:51', '2020-05-05 08:06:51'),
+	(34, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:07:43', '2020-05-05 08:07:43'),
+	(35, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:09:18', '2020-05-05 08:09:18'),
+	(36, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:23:51', '2020-05-05 08:23:51'),
+	(37, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:29:40', '2020-05-05 08:29:40'),
+	(38, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:30:05', '2020-05-05 08:30:05'),
+	(39, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 08:30:55', '2020-05-05 08:30:55'),
+	(40, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 09:04:31', '2020-05-05 09:04:31'),
+	(41, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 09:06:20', '2020-05-05 09:06:20'),
+	(49, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:15:42', '2020-05-05 20:15:42'),
+	(50, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:16:00', '2020-05-05 20:16:00'),
+	(51, NULL, NULL, NULL, NULL, NULL, 'sdsd', 'ads', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:16:25', '2020-05-05 20:16:25'),
+	(52, NULL, NULL, NULL, NULL, NULL, 'sdsd', 'ads', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:23:54', '2020-05-05 20:23:54'),
+	(53, NULL, NULL, NULL, NULL, NULL, 'sdsd', 'ads', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:30:02', '2020-05-05 20:30:02'),
+	(54, NULL, NULL, NULL, NULL, NULL, 'sdsd', 'ads', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:35:35', '2020-05-05 20:35:35'),
+	(55, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:36:19', '2020-05-05 20:36:19'),
+	(56, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-05-05 20:36:41', '2020-05-05 20:36:41');
 /*!40000 ALTER TABLE `ekspor_sementara` ENABLE KEYS */;
 
 -- Dumping structure for table db_po.ekspor_sementara_detail_barang
@@ -135,6 +165,46 @@ INSERT INTO `ekspor_sementara_detail_barang` (`id`, `ekspor_sementara_id`, `urai
 	(3, 15, 'adasd', NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:10:15', '2020-04-28 08:10:15'),
 	(4, 19, 'asdasda', NULL, NULL, NULL, NULL, NULL, '2020-04-28 08:14:52', '2020-04-28 08:14:52');
 /*!40000 ALTER TABLE `ekspor_sementara_detail_barang` ENABLE KEYS */;
+
+-- Dumping structure for table db_po.ekspor_sementara_dokap
+CREATE TABLE IF NOT EXISTS `ekspor_sementara_dokap` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ekspor_sementara_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `jenis_dokumen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nomor` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tanggal` date DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table db_po.ekspor_sementara_dokap: ~2 rows (approximately)
+/*!40000 ALTER TABLE `ekspor_sementara_dokap` DISABLE KEYS */;
+INSERT INTO `ekspor_sementara_dokap` (`id`, `ekspor_sementara_id`, `jenis_dokumen`, `nomor`, `tanggal`, `created_at`, `updated_at`) VALUES
+	(1, 24, 'asdsd', 'sds', '2020-05-06', '2020-05-05 03:44:10', '2020-05-05 03:44:10'),
+	(2, 24, 'asdsd', 'dds', '2020-05-12', '2020-05-05 03:44:10', '2020-05-05 03:44:10');
+/*!40000 ALTER TABLE `ekspor_sementara_dokap` ENABLE KEYS */;
+
+-- Dumping structure for table db_po.ekspor_sementara_file_dokap
+CREATE TABLE IF NOT EXISTS `ekspor_sementara_file_dokap` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ekspor_sementara_id` int(10) unsigned NOT NULL,
+  `nama_dokumen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `size` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table db_po.ekspor_sementara_file_dokap: ~4 rows (approximately)
+/*!40000 ALTER TABLE `ekspor_sementara_file_dokap` DISABLE KEYS */;
+INSERT INTO `ekspor_sementara_file_dokap` (`id`, `ekspor_sementara_id`, `nama_dokumen`, `file`, `size`, `created_at`, `updated_at`) VALUES
+	(1, 31, 'sdsd', '8brxwJKLEW75nEEbbOsAvjdlCgxiK5Ab93AFx79Z.jpeg', 166516, '2020-05-05 08:03:44', '2020-05-05 08:03:44'),
+	(2, 32, NULL, 'N2NkWahFaIW8vFWNbTv2MRJAxHZcVJPZzHD6irGn.jpeg', 129813, '2020-05-05 08:04:48', '2020-05-05 08:04:48'),
+	(3, 37, NULL, 'nMgldbLiGMO9suFEeTDirXcW4ro1maieh3KBbNK5.jpeg', 166516, '2020-05-05 08:29:40', '2020-05-05 08:29:40'),
+	(4, 38, NULL, 'DDzmc0DzVhuboYCI733sWPFSGuWFjha5jbwRhd7d.jpeg', 72997, '2020-05-05 08:30:05', '2020-05-05 08:30:05');
+/*!40000 ALTER TABLE `ekspor_sementara_file_dokap` ENABLE KEYS */;
 
 -- Dumping structure for table db_po.failed_jobs
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
@@ -245,7 +315,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_po.migrations: ~3 rows (approximately)
+-- Dumping data for table db_po.migrations: ~2 rows (approximately)
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_000000_create_users_table', 1),
@@ -564,7 +634,7 @@ CREATE TABLE IF NOT EXISTS `perusahaan` (
   CONSTRAINT `FK_perusahaan_kd_id` FOREIGN KEY (`kd_id`) REFERENCES `jenis_identitas` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_po.perusahaan: ~2 rows (approximately)
+-- Dumping data for table db_po.perusahaan: ~0 rows (approximately)
 /*!40000 ALTER TABLE `perusahaan` DISABLE KEYS */;
 INSERT INTO `perusahaan` (`id`, `kd_id`, `no_kd_id`, `nama`, `alamat`, `kd_pod`, `no_tlp`, `no_fax`, `kota`, `status_perusahaan`, `kd_api`, `no_api`, `kategori`, `fl_history`, `ks_kantor_rekam`, `nip_rekam`, `wk_rekam`, `nip_upd`, `wk_upd`, `npwp9`, `no_tdp`, `tgl_tdp`, `no_siup`, `tgl_siup`, `fl_khusus`) VALUES
 	(1, 5, '999999999999999', 'PT NAMA PERUSAHAAN', 'ALAMAT PERUSAHAAN ADALAH DI KOTA ADALAH', '12345', '2121212121', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),

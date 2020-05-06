@@ -9,7 +9,7 @@
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">Jenis Dokumen</th>
+                <th scope="col">Nama Dokumen</th>
                 <th scope="col">Act</th>
                 </tr>
             </thead>
@@ -41,24 +41,19 @@
 
     </div>
 </div>
-<div class="form-group row">
-    <div class="col-sm-4">
-        <input type="text" class="form-control form-control-sm" id="" placeholder="Jenis Dokumen">
+<div id="file_dokap">
+    <div class="form-group row">
+        <div class="col-sm-4">
+            <input type="text" class="form-control form-control-sm" name="nama_file_dokumen_pelengkap[]" placeholder="Nama Dokumen">
+        </div>
+        <div class="col-sm-4">
+            <input type="file" class="form-control-file" name="file_dokumen_pelengkap[]">
+        </div>
     </div>
-    <div class="col-sm-4">
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <button class="btn btn-secondary btn-sm" type="button" id="inputGroupFileAddon03">Button</button>
-  </div>
-  <div class="custom-file">
-    <input type="file" class="custom-file-input form-control-sm" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
-    <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
-  </div>
-</div>
-    </div>
+
 </div>
 <div class="form-group row">
     <div class="col-sm-12">
-        <button class="btn btn-primary btn-sm">Tambah</button>
+        <button class="btn btn-primary btn-sm" onclick="addInput('#file_dokap')">Tambah</button>
     </div>
 </div>
