@@ -30,7 +30,7 @@ class EksporSementaraController extends Controller
      */
     public function create()
     {
-        return view('ekspor-sementara/create');
+        return view('ekspor-sementara/create',['data' => new EksporSementara()]);
     }
 
     /**
@@ -41,7 +41,7 @@ class EksporSementaraController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
+        dd($request->all());
         // dd($request->file('file_dokumen_pelengkap')[0]->isValid());
         DB::beginTransaction();
         try {
@@ -105,7 +105,7 @@ class EksporSementaraController extends Controller
                 }
             }
             DB::commit();
-            return redirect()->route('eksporSementara.show',$eksporS);
+            return redirect()->route('eksporSementara.edit',$eksporS->id);
 
         } catch (\Throwable $th) {
             DB::rollback();
@@ -121,7 +121,7 @@ class EksporSementaraController extends Controller
      */
     public function show(EksporSementara $eksporSementara)
     {
-        return view('ekspor-sementara/show', compact('eksporSementara'));
+        // return view('ekspor-sementara/show', compact('eksporSementara'));
     }
 
     /**
@@ -130,9 +130,14 @@ class EksporSementaraController extends Controller
      * @param  \App\EksporSementara  $eksporSementara
      * @return \Illuminate\Http\Response
      */
-    public function edit(EksporSementara $eksporSementara)
+    public function edit($id)
     {
-        //
+        $data = EksporSementara::findOrFail($id);
+        $detail = $data->detail;
+        dd($detail);
+        return view('ekspor-sementara/edit',
+            compact('data')
+        );
     }
 
     /**

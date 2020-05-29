@@ -15,6 +15,7 @@ class PdfEksporSementara extends Fpdf
     public function __construct()
     {
         parent::__construct('P', 'mm', 'A4');
+        $this->SetMargins(25, 15, 25);
         $this->SetAutoPageBreak(true, 14);
     }
 
@@ -26,10 +27,9 @@ class PdfEksporSementara extends Fpdf
 
     public function generatePage(){
         $p = $this;
-
         // add new page
         $p->AddPage();
-        $p->SetFont('Arial', '', 8);
+        $p->SetFont('Arial', '', 10);
 
         // current pos
         $currX  = $p->GetX();
@@ -38,7 +38,7 @@ class PdfEksporSementara extends Fpdf
         // KOP SURAT
         // output image
 
-        $p->Image(__DIR__. '/logo_depkeu.png', null, null, 15, 15);
+        $p->Image(__DIR__. '/logo_depkeu.png', null, null, 30, 30);
 
         $p->SetXY($currX + 17.5, $currY);
 

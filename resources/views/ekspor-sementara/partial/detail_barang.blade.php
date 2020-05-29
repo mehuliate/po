@@ -22,7 +22,7 @@
                 <tbody>
                     <tr>
                     <th scope="row">1</th>
-                    <td>Alat Potong kepala</td>
+                    <td>Alat Potong</td>
                     <td>1</td>
                     <td>Unit</td>
                     <td>1</td>
