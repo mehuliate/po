@@ -9,14 +9,12 @@ class PrintPdfController extends Controller
 {
     public function show(Request $request, $doc){
 
-        
-
         $docType = $doc;
         switch ($docType) {
             case 'ekspor-sementara':
                 $pdf = new PES();
                 $pdf->generatePage();
-                $pdf->Output();
+                $pdf->Output('I', 'EksporSementara.pdf');
                 exit;
 
             default:
